@@ -1,0 +1,122 @@
+@media screen and (orientation:landscape) and (min-width:1366px){
+    .main{
+        display:flex;
+        flex-wrap:wrap;
+    }
+    #hero-area > :nth-child(1){
+        background:var(--blue);
+        position:absolute;
+        z-index:-1;
+        transform:rotate(150deg);
+        content:'';
+        top:40%;
+        left:30%
+    }
+    #hero-area > :nth-child(3) > * > h1{
+       position:relative;
+       top:7%;
+    }
+    #hero-area > :nth-child(3) > *::after{
+        border-top:50px solid white;
+        border-right:50px solid transparent;
+        border-left:50px solid transparent;
+        border-bottom:50px solid transparent;
+        content:"";
+        position:absolute;
+        top:65%;
+    }
+    #main-nav > div:hover{
+        border-radius:15px;
+    }
+    #other-site-link > div > h5, #other-site-link > div > p{
+        height:20px;
+
+    }
+    #quality > div {
+        background:var(--blue);
+        color:var(--white);
+        margin:2%;
+        clip-path: polygon(10% 0%, 100% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 10%, 0% 10%);
+    }
+    #service-types > div{
+        margin:2%;
+        border-top:10px solid var(--blue);
+    }
+    
+    #products > div > *:nth-child(2){
+        display:none;
+    }
+    #products > div:hover >*:nth-child(2){
+        display:initial;
+    }
+    #form-register > *{
+        height:10%;
+        margin:2%;
+    }
+    #form-register > input, #form-register > button{
+        padding:2%;
+    }
+}
+@media screen and (orientation:portrait) and (min-width:360px){
+    #nav-opener-portrait{
+        background:rgba(0,0,0,0.7);
+        border-radius:50%;
+        left:80%;
+        top:50%;
+    }
+    #nav-opener-portrait > *{
+        font-size:60px;
+    }
+    #hero-area > :nth-child(3) > div::after{
+        content:"";
+        position:absolute;
+        border-top:50px solid white;
+        border-right:50px solid transparent;
+        border-left:50px solid transparent;
+        border-bottom:50px solid transparent;
+        margin-top:15%;
+    }
+    #main-nav-container{
+        top:0;
+        z-index:1;
+        height:100%;
+    }
+    #main-nav-container > div{
+        height:100%;
+    }
+    #main-nav > *{
+        top:0;
+        height:5%;
+        margin:5%;
+        font-size:2rem;
+    }
+    #quality > div{
+        margin:2%;
+        clip-path: polygon(5% 0%, 100% 0%, 100% 95%, 95% 100%, 0% 100%, 0% 5%);
+    }
+    #service-types > div{
+        border-left:10px solid var(--blue);
+        margin-bottom:1%;
+    }
+    #products > div{
+        margin-bottom:2%;
+    }
+    #form-register > * {
+        height:10%;
+        margin:2%;
+    }
+    #form-register > input, #form-register > button{
+        padding:2%;
+        font-size:1.5rem;
+    }
+    #form-register > button{
+        border-radius:25px;
+    }
+    #footer > div > div > h4{
+        font-size: 2rem;
+    }
+    #footer > div > div > div > h4, #footer > div > div > div > h5{
+        display:flex;
+        font-size:1em;
+    }
+}

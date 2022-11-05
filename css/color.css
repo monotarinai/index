@@ -1,0 +1,77 @@
+:root{
+    --white:#ffffff;
+    --darkerblue:#0B2774;
+    --blue:#2D53BC;
+    --grey:#999999;
+    --darkgrey:#444444;
+    --black:#222222;
+}
+
+#hero-area > :nth-child(3){
+    color:white;
+}
+
+@media screen and (orientation:landscape) and (min-width:1366px){
+    #main-nav > div:hover{
+        background:var(--blue);
+        color:white;
+    }
+    #quality > div{
+        background:var(--blue);
+        color:var(--white);
+    }
+    #quality > div:hover{
+        background:var(--darkerblue);
+    }
+    #service-types > div:hover{
+        background:var(--darkerblue);
+        color:white;
+    }
+    #products > div:hover{
+        background:var(--grey);
+        color:white;
+    }
+    #form-register{
+        background:var(--blue);
+    }
+    #form-register > *{
+        color: white;
+    }
+    #form-register > input, #form-register > button{
+        background:var(--darkerblue);
+        border:none;
+    }
+}
+@media screen and (orientation:portrait) and (min-width:360px){
+    #nav-opener-portrait > *{
+        color:white;
+    }
+    #main-nav-container{
+        background:rgba(0,0,255,0.8);
+    }
+    #main-nav > *{
+        background:var(--darkerblue);
+        color:white;
+    }
+    #hero-area > :nth-child(3){
+        background:var(--blue);
+    }
+    #button-close-nav-portrait{
+        background:var(--darkerblue);
+        color:white;
+    }
+    #quality > div{
+        background:var(--blue);
+        color:white;
+    }
+    #form-register {
+        background:var(--blue);
+    }
+    #form-register > *{
+        color:var(--white);
+    }
+    #form-register > input, #form-register > button{
+        background:var(--darkerblue);
+        border:none;
+    }
+}

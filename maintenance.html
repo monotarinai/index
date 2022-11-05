@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Maintenance</title>
+        <meta name="author" content="monotarinai">
+        <meta name="robot" content="noindex, nofollow">
+        <style>
+            *{
+                box-sizing: border-box;
+                font-family:'sans-serif';
+                color:#444;
+            }
+            html, body{
+                width:100%;
+                height:100%;
+                margin:0;
+                overflow-x:hidden;
+            }
+            .wrapper{
+                width:100%;
+                height:inherit;
+                display:flex;
+                flex-direction:column;
+                justify-content: center;
+                text-align:center;
+            }
+            .moving-animation{
+                width:100%;
+                height:25%;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .moving-animation > *{
+                width:15%;
+                height:20%;
+                margin:0.5%;
+                border:1px solid black;
+                border-radius:25px;
+            }
+        </style>
+        <script>
+            window.onload=function(){
+                var docs=document.getElementsByClassName('moving-animation')[0];
+                var docsChildren=docs.children;
+                var childrenLength=docsChildren.length;
+                var x=0;
+                window.setInterval(function(){
+                    if(x<childrenLength){
+                        var chosenChild=docsChildren[x];
+                        chosenChild.style.background='#2D53BC';
+                        chosenChild.style.border='none';
+                        x+=1;
+                    }else if(x==4){
+                        for(var y=0;y<childrenLength;y++){
+                            var chosenChild=docsChildren[y];
+                            chosenChild.style.background='white';
+                            chosenChild.style.border='1px solid black';
+                        }
+                        x=0;
+                    }
+                }, 1000);
+            }
+        </script>
+
+    </head>
+    <body>
+        <div class="wrapper">
+            <h1>MAINTENANCE</h1>
+            <div class="moving-animation">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <h4>ON PROGRESS</h4>
+        </div>
+    </body>
+</html>
